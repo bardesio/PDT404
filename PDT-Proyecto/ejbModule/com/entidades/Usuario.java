@@ -26,6 +26,9 @@ public class Usuario implements UsuarioRemote {
     private Long id;
     @Column(name="PASS", length=30, nullable=true)
     private String pass;
+	
+	
+	//Hola que ase
     
     
     
