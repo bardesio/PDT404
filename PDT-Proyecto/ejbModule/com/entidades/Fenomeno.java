@@ -1,18 +1,23 @@
 package com.entidades;
 
 import java.io.Serializable;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "FENOMENOS")
-public class Usuario implements Serializable{
+public class Fenomeno implements Serializable{
 
     
 	@SequenceGenerator(name="SEQ_FENOMENOID", initialValue=1, allocationSize=100)
     private static final long serialVersionUID = 1L;
     public Fenomeno() {
-        // TODO Auto-generated constructor stub
+    	
     }
 
     @Id
@@ -29,7 +34,7 @@ public class Usuario implements Serializable{
     private String nombre;
  
    
-	public Usuario(Long id, String descripcion, String nombre) {
+	public Fenomeno(Long id, String descripcion, String nombre) {
 		super();
 		
 		this.id = id;
@@ -37,13 +42,6 @@ public class Usuario implements Serializable{
 		this.nombre = nombre;
 	}
     
-	public TipoUsuario getTipousuario() {
-		return tipousuario;
-	}
-	public void setTipousuario(TipoUsuario tipousuario) {
-		this.tipousuario = tipousuario;
-	}
-	
 	
 	public Long getId() {
 		return id;
